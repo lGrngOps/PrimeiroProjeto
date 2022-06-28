@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faça o seu cadastro</title>
+</head>
+
+<body>
+<h1>Insira suas informações</h1>
+
+<form th:action="@{/users}" th:object="${user}" method="POST">
+
+    <div>
+        <label th:for="name">Nome:</label>
+        <input type="text" th:field="*{name}" placeholder="Seu Nome" required="required" name="name">
+    </div>
+
+    <div>
+        <label th:for="lastName">Sobrenome:</label>
+        <input type="text" th:field="*{lastName}" placeholder="Sobrenome" required="required" name="lastName">
+    </div>
+
+    <div>
+        <label th:for="birthDate">Ano de Nascimento:</label>
+        <input name="date" type="date" th:field="*{birthDate}" placeholder="Data de Nascimento" required="required">
+    </div>
+
+
+    <div>
+        <button type="submit" >Enviar</button>
+    </div>
+
+</form>
+</body>
+</html>
