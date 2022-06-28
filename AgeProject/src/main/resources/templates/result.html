@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<body>
+<h1>Dados enviados pelo usuário:</h1>
+
+
+<form th:object="${user}">
+    <div>
+        <label th:for="name">Nome</label>
+        <input type="text" name="name" th:field="*{name}">
+        <label th:for="lastName">Sobrenome</label>
+        <input type="text" name="lastName" th:field="*{lastName}">
+        <label th:for="birthDate">Data de Nascimento</label>
+        <input type="text" name="birthDate" th:field="*{birthDate}">
+    </div>
+</form>
+
+<!--
+<p>Nome
+<p>Sobrenome: <b th:text="${user.lastName}"/></p>
+<p>Data de Nascimento: <b th:/></p>: <b th:text="${user.name}"/></p>
+
+<p>Sobrenome: <b th:text="${user.lastName}"/></p>
+<p>Data de Nascimento: <b th:/></p>
+-->
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pessoa - Cadastro</title>
+</head>
+</html>
